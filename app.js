@@ -6,7 +6,7 @@ dotenv.config();
 const app = express();
 app.use(cors())
 app.use(bodyparser.urlencoded({ extended: true }));
-const port = 3306;
+const port = 5000;
 const dbconnection = require("./db/dbconnection");
 
 const userRoute = require("./route/userRoute");
