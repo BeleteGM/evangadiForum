@@ -50,15 +50,20 @@ const dbconnection = mysql.createPool({
     )`;
 
   dbconnection.query(users, (err, res) => {
-    if (err) throw err;
+    if (err) {
+      console.log(err);
+    } 
     console.log("user table created");
   });
   dbconnection.query(questions, (err, res) => {
-    if (err) throw err;
+    if (err) {
+     console.log(err);}
     console.log("questions table created");
   });
   dbconnection.query(answers, (err, res) => {
-    if (err) throw err;
+    if (err) {
+      console.log(err);
+    } 
     console.log("answers table created");
   });
   // res.send("table created successful");
